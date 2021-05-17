@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="cannang" placeholder="cân nặng">
+    <input type="text" id="chieu cao" placeholder="chiều cao">
+    <button type="button" onclick="checkcn()">check!</button>
+    <h3 id="out">you are: </h3>
+</form>
+<script>
+    function checkcn() {
+        let a =+document.getElementById("cannang").value;
+        let b =+document.getElementById("chieu cao").value;
+        let c = a / b*b;
+        if (c >= 30 ) {
+            document.getElementById("out").innerHTML +="thím thuộc nhóm Obese";
+        }else if (25 <= c && c < 30 ) {
+            document.getElementById("out").innerHTML +="nhóm oveweight";
+        }else if (18.5 <= c && c < 25) {
+            document.getElementById("out").innerHTML +="nhóm normal";
+        }else {
+            document.getElementById("out").innerHTML +="nhóm underweight";
+        }
+    }
+</script>
+</body>
+</html>
